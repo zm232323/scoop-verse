@@ -1,0 +1,42 @@
+{% extends 'scoop_app/base.html' %}
+{% load static %}
+
+{% block title %}Our Story - ScoopVerse Premium Ice Cream{% endblock %}
+
+{% block meta_description %}
+Discover the story behind ScoopVerse. Learn about our mission to bring happiness through handcrafted organic ice cream.
+{% endblock %}
+
+{% block content %}
+
+<!-- Main About Section -->
+<section class="about-preview" id="about-story" style="min-height: calc(80vh - 70px);">
+    <div class="about-text">
+        <h2>Our Sweet Story</h2>
+
+        <p>
+            ScoopVerse started with a simple, sweet dream: to bring people together over
+            the finest, creamiest, and most delicious ice creams imaginable. Our journey
+            began in a tiny kitchen, experimenting with organic fruits, roasted vanilla pods,
+            and hand-swirled caramels.
+        </p>
+
+        <p>
+            Today, our mission remains exactly the same—to churn high-quality artisan ice cream
+            that spreads pure joy. We work hand-in-hand with local organic dairy farmers to ensure
+            every single scoop is thick, velvety, and sustainably produced.
+        </p>
+
+        <p>
+            Every flavor in our boutique is meticulously crafted from scratch. We believe in
+            transparency, premium ingredients, and absolutely no artificial colors or high-fructose
+            corn syrups. Just pure, unadulterated happiness.
+        </p>
+    </div>
+
+    <div class="about-image">
+        <img src="{% static 'scoop_app/images/caramel_swirl.png' %}" alt="Creamy Caramel Swirl Ice Cream scoop" id="about-story-img">
+    </div>
+</section>
+
+{% endblock %}

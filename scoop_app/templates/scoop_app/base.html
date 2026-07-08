@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}ScoopVerse Premium Ice Cream{% endblock %}">
+    <title>{% block title %}ScoopVerse{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'scoop_app/css/style.css' %}">
+</head>
+<body>
+
+    <!-- Floating Navigation Bar -->
+    <nav class="navbar" id="main-nav">
+        <div class="logo" onclick="location.href='{% url 'home' %}'">ScoopVerse</div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'products' %}" class="{% if request.resolver_match.url_name == 'products' %}active{% endif %}">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Premium Footer -->
+    <footer class="footer" id="app-footer">
+        <div class="footer-logo">ScoopVerse</div>
+        <p>© 2026 ScoopVerse | Handcrafted Happiness in Every Scoop</p>
+        <p>Made with love for ice cream enthusiasts everywhere.</p>
+
+        <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="{% static 'scoop_app/images/fb_icon.jpg' %}" alt="Facebook">
+            </a>
+
+            <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="{% static 'scoop_app/images/ig_icon.jpg' %}" alt="Instagram">
+            </a>
+
+            <a href="#" class="social-icon" aria-label="X">
+                <img src="{% static 'scoop_app/images/x_icon.jpg' %}" alt="X">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

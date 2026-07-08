@@ -1,0 +1,139 @@
+{% extends 'scoop_app/base.html' %}
+{% load static %}
+
+{% block title %}Our Menu - ScoopVerse Premium Ice Cream Flavors{% endblock %}
+
+{% block meta_description %}
+Explore our premium collection of artisanal ice cream flavors. Handcrafted, organic, and absolutely delicious.
+{% endblock %}
+
+{% block content %}
+
+<!-- Products Menu Section -->
+<section class="products" id="menu-section">
+    <h2 class="section-title">Our Premium Flavors</h2>
+    <p class="section-subtitle">
+        Churned fresh daily in small batches using premium organic ingredients.
+        Discover your new favorite obsession.
+    </p>
+
+    <div class="product-container">
+
+        <!-- Chocolate Blast -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/chocolate_blast.png' %}" alt="Chocolate Blast Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Chocolate Blast</h3>
+                    <p>Rich Belgian chocolate cream base loaded with dark cocoa shavings and a velvety chocolate fudge swirl.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 700</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strawberry Dream -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/strawberry_dream.png' %}" alt="Strawberry Dream Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Strawberry Dream</h3>
+                    <p>Creamy organic milk base infused with fresh handpicked garden strawberries and a sweet strawberry ripple.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 650</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vanilla Heaven -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/vanilla_heaven.png' %}" alt="Vanilla Heaven Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Vanilla Heaven</h3>
+                    <p>Classic premium Madagascar bourbon vanilla bean extract whisked into pure sweet cream. Simple elegance.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 600</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oreo Crunch -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/oreo_crunch.png' %}" alt="Oreo Crunch Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Oreo Crunch</h3>
+                    <p>Decadent sweet cream base heavily loaded with hand-crushed crunchy chocolate Oreo sandwich cookies.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 700</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caramel Swirl -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/caramel_swirl.png' %}" alt="Caramel Swirl Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Caramel Swirl</h3>
+                    <p>Smooth, rich brown butter ice cream folded with golden ribbons of salted caramel sauce and sea salt crystals.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 750</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mango Magic -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/mango_magic.png' %}" alt="Mango Magic Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Mango Magic</h3>
+                    <p>Vibrant, dairy-free vegan sorbet made from sweet Alphonso mango pulp with a refreshing hint of tropical lime.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 700</span>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'scoop_app/base.html' %}
+{% load static %}
+
+{% block title %}ScoopVerse - Premium Handcrafted Ice Cream Shop{% endblock %}
+
+{% block meta_description %}
+Welcome to ScoopVerse - The ultimate premium ice cream experience. Fresh ingredients, exquisite flavors, and sweet memories.
+{% endblock %}
+
+{% block content %}
+
+<!-- Custom Hero Section -->
+<header class="hero">
+    <div class="hero-text">
+        <h1>Every Scoop tells a <span>Sweet Story</span></h1>
+
+        <p>
+            Step into ScoopVerse, where gourmet craftsmanship meets pure joy.
+            We serve fresh, organic, and handcrafted ice cream scoops made with love
+            and premium ingredients to elevate your dessert experience.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{% url 'products' %}" class="btn btn-primary">Explore Flavors</a>
+            <a href="{% url 'contact' %}" class="btn btn-secondary">Get In Touch</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{% static 'scoop_app/images/hero_icecream.png' %}" alt="Signature Gourmet Ice Cream Sundae" id="hero-img">
+    </div>
+</header>
+
+<!-- Featured Products Section -->
+<section class="products" id="featured-products">
+    <h2 class="section-title" id="featured-title">Featured Flavors</h2>
+    <p class="section-subtitle">A curated selection of our all-time fan favorites. Indulge in perfection.</p>
+
+    <div class="product-container">
+
+        <!-- Chocolate Blast -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/chocolate_blast.png' %}" alt="Chocolate Blast Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Chocolate Blast</h3>
+                    <p>Rich Belgian chocolate cream base loaded with dark cocoa shavings and a velvety chocolate fudge swirl.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 700</span>
+                    <a href="{% url 'products' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strawberry Dream -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/strawberry_dream.png' %}" alt="Strawberry Dream Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Strawberry Dream</h3>
+                    <p>Creamy organic milk base infused with fresh handpicked garden strawberries and a sweet strawberry ripple.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 650</span>
+                    <a href="{% url 'products' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vanilla Heaven -->
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="{% static 'scoop_app/images/vanilla_heaven.png' %}" alt="Vanilla Heaven Ice Cream">
+            </div>
+
+            <div class="card-content">
+                <div>
+                    <h3>Vanilla Heaven</h3>
+                    <p>Classic premium Madagascar bourbon vanilla bean extract whisked into pure sweet cream. Simple elegance.</p>
+                </div>
+
+                <div class="price-row">
+                    <span class="price">Rs. 600</span>
+                    <a href="{% url 'products' %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview" id="about-teaser">
+    <div class="about-text">
+        <h2>About ScoopVerse</h2>
+
+        <p>
+            ScoopVerse is a premium artisan ice cream boutique created to spread sweetness,
+            smiles, and pure happiness. Every single batch we churn is made with locally-sourced,
+            organic ingredients and dairy from happy pasture-raised cows.
+        </p>
+
+        <p>
+            Whether you're looking for traditional classics or adventurous fruit sorbets,
+            we have designed a celestial flavor catalog just for you.
+        </p>
+
+        <a href="{% url 'about' %}" class="btn btn-secondary" style="margin-top: 15px;">Read Our Story</a>
+    </div>
+
+    <div class="about-image">
+        <img src="{% static 'scoop_app/images/oreo_crunch.png' %}" alt="Oreo Crunch Ice Cream Scoop" id="about-img-preview">
+    </div>
+</section>
+
+{% endblock %}

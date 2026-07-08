@@ -1,0 +1,19 @@
+# Virtual Environment
+scoop_env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Database
+db.sqlite3
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# Collected static files
+staticfiles/
